@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-24T19:01:21.723Z",
+    "end": "2025-06-24T19:01:59.829Z",
+    "duration": 38106,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "39e4a171-c94c-4b18-a1b4-10b57a3c4298",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registration.spec.js",
+      "file": "cypress\\e2e\\registration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d1170e8-dcb8-416b-86bf-5d5fdf923cb4",
+          "title": "Test Case A: Registration and Login with fully random user data",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Registers a new user with random data and validates login",
+              "fullTitle": "Test Case A: Registration and Login with fully random user data Registers a new user with random data and validates login",
+              "timedOut": null,
+              "duration": 37978,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = generateRandomUser();\ncy.visit('/customer/account/create/');\nregistrationPage.fillRegistrationForm(user);\nregistrationPage.submit();\ncy.contains('Thank you for registering with Main Website Store.').should('be.visible');\ncy.contains('Sign Out').click({\n  force: true\n});\ncy.wait(6000);\ncy.visit('/customer/account/login/');\nloginPage.login(user.email, user.password);\ncy.contains('Account Information').should('be.visible');",
+              "err": {},
+              "uuid": "78a1e88b-bc89-4c8c-8121-63f55454d892",
+              "parentUUID": "9d1170e8-dcb8-416b-86bf-5d5fdf923cb4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78a1e88b-bc89-4c8c-8121-63f55454d892"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37978,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
