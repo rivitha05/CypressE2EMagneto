@@ -1,0 +1,15 @@
+{
+  "name": "cypress-magento-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cypress run",
+    "test:report": "cypress run --reporter mochawesome --reporter-options reportDir=mochawesome-report,overwrite=false,html=true,json=true"
+  },
+  "devDependencies": {
+    "cypress": "^13.0.0",
+    "dotenv": "^16.0.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
