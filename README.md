@@ -50,3 +50,19 @@ Open this HTML file in your browser to see detailed test results with screenshot
 - ✅ Place Order with Multiple Products
 - ✅ Wishlist to Checkout
 - ✅ Search and Validate
+
+
+## Documentation
+
+To help you navigate, the following folders for rest of assessments questions:
+
+- **postman-collection/**  
+  Contains the Postman collection exported as a PDF.  
+  Use this to review the API test cases and requests.
+
+- **manual-test-cases/**  
+  Contains the manual test cases in PDF format.  
+  Refer to this document for detailed step-by-step manual test scenarios.
+
+- **performance/**  
+  Contains the performance test plan in PDF format.  
